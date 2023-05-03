@@ -46,3 +46,8 @@ Após realizar login, o Admin terá acesso a todas as funcionalidades: Cadastro 
 - As funcionalidades de Check-In, Check-Out e Alteração terão propriedades de Filtragem, afinal trabalham com alto fluxo de informações.
 
 - Todas as informações serão salvas em um Banco de Dados, para garantir a segurança dos dados. 
+
+## Preview
+
+![fetchdemo](https://user-images.githubusercontent.com/89088603/235821825-3a43157d-0440-4d1d-9895-fb8e5c3ae1bb.png)
+![fetchdemo](https://user-images.githubusercontent.com/89088603/235821822-cebedd75-6d28-453f-a47a-5992922ef181.png)
