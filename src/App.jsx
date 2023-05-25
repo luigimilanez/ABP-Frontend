@@ -1,12 +1,11 @@
 import React from 'react'
+import RoutesApp from './routes/RoutesApp'
 import './App.css'
 
 function App() {
 
   return (
-    <div>
-      <h1>teste</h1>
-    </div>
+    <RoutesApp />
   )
 }
 
