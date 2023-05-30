@@ -1,0 +1,9 @@
+{
+    "accounts": [
+        {
+            "username": "admin",
+            "password": "123",
+            "token": "abc123321"
+        }
+    ]
+}

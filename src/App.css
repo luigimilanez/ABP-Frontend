@@ -9,3 +9,47 @@
 html {
   background-color: #000000ec;
 }
+
+.styleDivContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.styleDivContent {
+  display: flex;
+  align-items: center;
+  top: 50vh;
+  bottom: 50vh;
+  position: absolute;
+  margin: auto;
+}
+
+.styleForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  height: 420px;
+  background-color: #1E2022;
+  border: 2px solid #00ff88b9;
+}
+
+.styleH1 {
+  color: #00ff88;
+}
+
+.styleH2 {
+  margin-top: 0.3rem;
+  font-size: 10px;
+  color: gray;
+  font-weight: bold;
+}
+
+.tagLink {
+  color: #1D7D35;
+  text-decoration: none;
+}
+
+.tagLink:hover {
+  color: #00ff88;
+}

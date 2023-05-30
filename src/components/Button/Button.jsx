@@ -9,6 +9,7 @@ export default function Button({width, height, color, marginTop, title}) {
         backgroundColor: color,  // #00ff88
         border: '1px solid black',
         borderRadius: '1rem',
+        outline: 'none',
     }
 
     return (
