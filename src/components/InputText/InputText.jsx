@@ -1,4 +1,4 @@
-export default function InputText({width, height, marginTop, placeholder, value, onChange}) {
+export default function InputText({width, height, marginTop, placeholder, type = "text", value, onChange}) {
     const styleInput = {
         width: width,  // 15rem
         height: height,  // 2rem
@@ -14,7 +14,7 @@ export default function InputText({width, height, marginTop, placeholder, value,
             placeholder={placeholder} 
             maxLength='32' 
             required
-            type="text" 
+            type={type}
             value={value} 
             onChange={onChange} />
     )

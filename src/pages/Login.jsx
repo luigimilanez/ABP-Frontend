@@ -9,7 +9,27 @@ export default function Login() {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    
+    const navigate = useNavigate();
+
+    const formulario = (event) => {
+        event.preventDefault();
+
+        fetch(`https://lista-front-api.burn-cloudflare-account.workers.dev`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                for (const pos in data) {                    
+                    if (data[pos].id === username && data[pos].name === password) {
+                        debugger;
+                        navigate('/cadastro');
+                    }
+                }
+            });
+    }
     //const redirect = useNavigate();
 
     return (
@@ -18,9 +38,7 @@ export default function Login() {
                 <form className="styleForm" 
                 action=""
                 method="post"
-                onSubmit={(event) => {
-                    event.preventDefault()
-                }}>
+                    onSubmit={formulario}>
                     <h1 style={{marginTop: '5rem'}} className="styleH1">Login</h1>
                     <label>
                         <InputText width="15rem"
@@ -35,8 +53,9 @@ export default function Login() {
                         <InputText width="15rem"
                         height="2rem"
                         marginTop="1rem"
-                        placeholder="Senha" 
-                        value={password} 
+                        placeholder="Senha"
+                        type="password"
+                        value={password}
                         onChange={(event) => setPassword(event.target.value)} />
                     </label>
 
