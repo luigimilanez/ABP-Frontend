@@ -14,7 +14,7 @@ export default function Login() {
     const formulario = (event) => {
         event.preventDefault();
 
-        fetch(`https://lista-front-api.burn-cloudflare-account.workers.dev`, {
+        fetch(`https://bookspotapi.adrianoreus.repl.co/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -23,8 +23,7 @@ export default function Login() {
             .then((response) => response.json())
             .then((data) => {
                 for (const pos in data) {                    
-                    if (data[pos].id === username && data[pos].name === password) {
-                        debugger;
+                    if (data[pos].login === username && data[pos].senha === password) {
                         navigate('/cadastro');
                     }
                 }
