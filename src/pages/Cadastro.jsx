@@ -48,11 +48,7 @@ export default function Cadastro() {
                     </label>
 
                     <label>
-                        <Button width="15rem"
-                            height="2rem"
-                            color='#00ff88'
-                            marginTop="2rem"
-                            title="CADASTRAR" /> 
+                        <Button nomeClasse="buttonForm" title="CADASTRAR" /> 
                     </label>
 
                     <h2 className="styleH2">Novo usuário? <Link to="/" className="tagLink">Logar-se</Link></h2>

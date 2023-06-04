@@ -60,11 +60,7 @@ export default function Login() {
                     </label>
 
                     <label>
-                        <Button width="15rem"
-                            height="2rem"
-                            color='#00ff88'
-                            marginTop="2rem"
-                            title="LOGAR" /> 
+                        <Button nomeClasse="buttonForm" title="LOGAR" /> 
                     </label>
 
                     <h2 className="styleH2">Novo usuário? <Link to="/cadastro" className="tagLink">Cadastre-se</Link></h2>
