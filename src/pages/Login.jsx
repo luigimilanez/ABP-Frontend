@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
+import Cookies from 'js-cookie';
 import Button from "../components/Button/Button";
 import InputText from "../components/InputText/InputText";
 
@@ -24,6 +25,8 @@ export default function Login() {
             .then((data) => {
                 for (const pos in data) {                    
                     if (data[pos].login === username && data[pos].senha === password) {
+                        const expirationDate = new Date(new Date().getTime() + (60 * 60 * 1000));
+                        Cookies.set('loginToken', 'logon', { expires: expirationDate });
                         navigate('/cadastro');
                     }
                 }
