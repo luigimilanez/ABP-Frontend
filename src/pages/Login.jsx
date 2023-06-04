@@ -10,6 +10,7 @@ export default function Login() {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [erro, setErro] = useState('');
     const navigate = useNavigate();
 
     const formulario = (event) => {
@@ -30,6 +31,7 @@ export default function Login() {
                         navigate('/cadastro');
                     }
                 }
+                setErro('Informações Inválidas!');
             });
     }
     //const redirect = useNavigate();
@@ -59,6 +61,10 @@ export default function Login() {
                         type="password"
                         value={password}
                         onChange={(event) => setPassword(event.target.value)} />
+                    </label>
+
+                    <label>
+                        <h2 className="styleH2" style={{ color: '#FF4E4E' }}>{erro}</h2>
                     </label>
 
                     <label>
