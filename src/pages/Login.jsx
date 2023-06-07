@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
+import Cookies from 'js-cookie';
 import Button from "../components/Button/Button";
 import InputText from "../components/InputText/InputText";
 
@@ -9,12 +10,13 @@ export default function Login() {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [erro, setErro] = useState('');
     const navigate = useNavigate();
 
     const formulario = (event) => {
         event.preventDefault();
 
-        fetch(`https://lista-front-api.burn-cloudflare-account.workers.dev`, {
+        fetch(`https://bookspotapi.adrianoreus.repl.co/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -23,11 +25,13 @@ export default function Login() {
             .then((response) => response.json())
             .then((data) => {
                 for (const pos in data) {                    
-                    if (data[pos].id === username && data[pos].name === password) {
-                        debugger;
+                    if (data[pos].login === username && data[pos].senha === password) {
+                        const expirationDate = new Date(new Date().getTime() + (60 * 60 * 1000));
+                        Cookies.set('loginToken', 'logon', { expires: expirationDate });
                         navigate('/cadastro');
                     }
                 }
+                setErro('Informações Inválidas!');
             });
     }
     //const redirect = useNavigate();
@@ -57,6 +61,10 @@ export default function Login() {
                         type="password"
                         value={password}
                         onChange={(event) => setPassword(event.target.value)} />
+                    </label>
+
+                    <label>
+                        <h2 className="styleH2" style={{ color: '#FF4E4E' }}>{erro}</h2>
                     </label>
 
                     <label>
