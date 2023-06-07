@@ -160,3 +160,16 @@ body {
   display: flex;
   justify-content: center;
 }
+
+/* testando componente de loading */
+/* .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50%;
+  position: absolute;
+  color: red;
+  background-color: yellow;
+  height: 10vh;
+  width: 5vw;
+} */
