@@ -19,7 +19,7 @@ export default function RoutesApp() {
         // a página da home
         useEffect(() => {
             const loginToken = Cookies.get('loginToken');
-            if (!loginToken) {
+            if (!loginToken && location.pathname !== '/cadastro') {
                 navigate('/')
             } 
         }, [navigate])
