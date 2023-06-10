@@ -19,8 +19,8 @@ export default function RoutesApp() {
         // a página da home
         useEffect(() => {
             const loginToken = Cookies.get('loginToken');
-            if (loginToken) {
-                navigate('/home')
+            if (!loginToken) {
+                navigate('/')
             } 
         }, [navigate])
     };

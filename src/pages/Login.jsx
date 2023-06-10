@@ -28,7 +28,7 @@ export default function Login() {
                     if (data[pos].login === username && data[pos].senha === password) {
                         const expirationDate = new Date(new Date().getTime() + (60 * 60 * 1000));
                         Cookies.set('loginToken', 'logon', { expires: expirationDate });
-                        navigate('/cadastro');
+                        navigate('/home');
                     }
                 }
                 setErro('Informações Inválidas!');
