@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
 import Button from "../components/Button/Button";
 import InputText from "../components/InputText/InputText";
-import { validateCookie } from "../components/Cookie/Cookie";
 
 export default function Cadastro() {
     document.title = 'BookSpot | Cadastro'
@@ -34,7 +33,7 @@ export default function Cadastro() {
                     });
 
                     if (response.ok) {
-                        validateCookie(navigate, '/');
+                        navigate('/');
                     } else {
                         // erro quando não conseguir salvar na API
                     }
