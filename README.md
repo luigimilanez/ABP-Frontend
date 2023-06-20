@@ -6,7 +6,7 @@ BookSpot, o melhor sistema para gerenciamento de reservas.
 
 **Adriano Reus Savi**
 
-**Gustavo Thomé**
+**Gustavo Thomé de Jesus**
 
 **Luigi Milanez**
 
