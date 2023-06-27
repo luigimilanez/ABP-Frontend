@@ -34,7 +34,6 @@ export default function Login() {
                 setErro('Informações Inválidas!');
             });
     }
-    //const redirect = useNavigate();
 
     return (
         <div className="styleDivContainer">
@@ -72,11 +71,6 @@ export default function Login() {
                     </label>
 
                     <h2 className="styleH2">Novo usuário? <Link to="/cadastro" className="tagLink">Cadastre-se</Link></h2>
-                    
-                    {/* testando componente de loading */}
-                    {/* <div className="loading">
-                        <h1>.</h1>
-                    </div> */}
                 </form>
             </div>          
         </div>
